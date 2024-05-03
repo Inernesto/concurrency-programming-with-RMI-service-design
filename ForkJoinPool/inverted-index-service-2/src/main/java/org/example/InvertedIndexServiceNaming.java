@@ -13,7 +13,7 @@ public class InvertedIndexServiceNaming {
             InvertedIndexServiceImpl server = new InvertedIndexServiceImpl();
             LocateRegistry.createRegistry(8080);
             
-            Naming.rebind("rmi://140.238.158.223:8080/InvertedIndexService", server);
+            Naming.rebind("rmi://your-server-URL-here/InvertedIndexService", server);
             
             System.out.println("InvertedIndexService ready...");
         } catch (MalformedURLException | RemoteException e) {
