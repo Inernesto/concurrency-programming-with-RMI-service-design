@@ -11,7 +11,7 @@ public class InvertedIndexServiceClientPerformance {
     public static void main(String[] args) {
         try {
             // Look up the remote object from the RMI registry
-            InvertedIndexService service = (InvertedIndexService) Naming.lookup("rmi://140.238.158.223:8080/InvertedIndexService");
+            InvertedIndexService service = (InvertedIndexService) Naming.lookup("rmi://your-server-URL-here/InvertedIndexService");
 
             // Example usage: Get the inverted index for a text
             String fileName = "sample_data.txt";
