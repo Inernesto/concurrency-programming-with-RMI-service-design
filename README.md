@@ -60,7 +60,7 @@ Callable:
 
 A functional interface in Java similar to Runnable, but it can return a result and throw checked exceptions. It is often used in conjunction with the ExecutorService interface to submit tasks that need to return a result.
 
-We ran a performance analysis using ExecutorService and Runnable, also another performance analysis using Fork Join Pool and Callable for 1000 RMI requests each. From the metrics we extracted, we can clearly see that there isn’t much difference between both currency techniques in terms of accomplishing tasks in this context. (NB: All units are in milliseconds).
+We ran a performance analysis using ExecutorService and Runnable (first figure below), also another performance analysis using Fork Join Pool and Callable (second figure below) for 1000 RMI requests each. From the metrics we extracted, we can clearly see that there isn’t much difference between both currency techniques in terms of accomplishing tasks in this context. (NB: All units are in milliseconds).
 
 !["Executor Service and Runnable"](Executors_and_Runnable_Performance.png)
 
