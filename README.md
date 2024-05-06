@@ -28,7 +28,7 @@ The interface:
 
 The interface plays a crucial role in defining the communication protocol between the client and server. It serves as a contract that both parties adhere to, specifying the methods that can be invoked remotely and their signatures. By sharing the same interface definition, the client and server ensure that they communicate using a common set of methods and parameters.
 
-!["RMI Sequence Diagram"](RMI Sequence Diagram.drawio.png)
+!["RMI Sequence Diagram"](RMI_Sequence_Diagram.drawio.png)
 
 In the sequence diagram as shown above, the steps would include:
 1. The client initiates a lookup request to the Naming service to obtain a reference to the remote object by providing its registered name.
@@ -40,7 +40,7 @@ In the sequence diagram as shown above, the steps would include:
 ## Results
 If the method invocation is successful, the server executes the requested operation and returns the result to the client. The expected outcome of the method invocation is a Map<String, List<Integer>>where each key represents a unique word found in the input text file, and the corresponding value is a list of line numbers where the word appears. The output is shown in the figure below.
 
-!["Inverted Index Output"](Inverted Index Result.png)
+!["Inverted Index Output"](Inverted_Index_Result.png)
 
 ## Executors vs ForkJoinPool and Runnable vs Callable
 
@@ -62,9 +62,9 @@ A functional interface in Java similar to Runnable, but it can return a result a
 
 We ran a performance analysis using ExecutorService and Runnable, also another performance analysis using Fork Join Pool and Callable for 1000 RMI requests each. From the metrics we extracted, we can clearly see that there isn’t much difference between both currency techniques in terms of accomplishing tasks in this context. (NB: All units are in milliseconds).
 
-!["Executor Service and Runnable"](Executors and Runnable Performance 2.png)
+!["Executor Service and Runnable"](Executors_and_Runnable_Performance.png)
 
-!["Fork Join Pool and Callable"](ForkJoinPool and Callable 2.png)
+!["Fork Join Pool and Callable"](ForkJoinPool_and_Callable.png)
 
 ## Conclusion
 In conclusion, RMI is a powerful technology for building distributed Java applications, providing a seamless way to invoke methods remotely between Java objects.
